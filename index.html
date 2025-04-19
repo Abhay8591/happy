@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Priya ❤️</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@700&display=swap');
+        
+        :root {
+            --primary: #d4afb9;
+            --secondary: #d1cfe2;
+            --accent: #9cadce;
+            --dark: #7ec4cf;
+            --light: #f8f4f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--light);
+            color: #333;
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+        
+        .page-wrapper {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: linear-gradient(135deg, var(--light) 0%, var(--secondary) 100%);
+        }
+        
+        /* Header Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1518199266791-5375a83190b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4.5rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            animation: fadeInDown 1.5s ease;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            color: #555;
+            animation: fadeIn 2s ease;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            position: relative;
+        }
+        
+        .section {
+            margin-bottom: 80px;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+        }
+        
+        .love-story p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .love-story p::before {
+            content: '❤';
+            position: absolute;
+            left: -5px;
+            color: var(--primary);
+        }
+        
+        /* Proposal Section */
+        .proposal-section {
+            text-align: center;
+            background: linear-gradient(135deg, rgba(212, 175, 185, 0.9) 0%, rgba(156, 173, 206, 0.9) 100%);
+            color: white;
+            padding: 80px 40px;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .proposal-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('https://www.transparenttextures.com/patterns/always-grey.png');
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .proposal-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .proposal-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .proposal-btn {
+            background: white;
+            color: var(--dark);
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .proposal-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+        
+        .proposal-btn:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+        }
+        
+        .proposal-btn:hover::before {
+            width: 100%;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            margin-top: auto;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--dark);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { 
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes fall {
+            to {
+                top: 100%;
+                transform: rotate(1080deg);
+            }
+        }
+        
+        @keyframes confetti {
+            0% {
+                opacity: 1;
+                transform: translateY(0) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+        
+        /* Decorative Elements */
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.7;
+            z-index: -1;
+            color: var(--primary);
+        }
+        
+        .petal {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            z-index: -1;
+            animation: fall linear infinite;
+        }
+        
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary);
+            opacity: 0;
+            z-index: 1000;
+            animation: confetti 5s ease-in-out;
+        }
+        
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section {
+                padding: 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .proposal-text {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="reveal">My Dearest Priya</h1>
+                <p class="reveal">Every love story is beautiful, but ours is my favorite</p>
+                <a href="#our-story" class="scroll-down">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+        
+        <div class="container">
+            <section id="our-story" class="section love-story reveal">
+                <h2 class="section-title">Our Journey</h2>
+                <p>We met in July, in a group chat... That day, talking to you felt like finding something special. Your way of speaking, your warmth—it all drew me in. For 1-1.5 months, we talked so much. You asked, "What are we?" but I didn't have an answer because... I didn't realize my feelings yet.</p>
+                
+                <p>When you stopped talking to me, I tried to forget you... but I couldn't. I was attached—your messages gave me peace, even if I told myself it was just affection. Then came Bangalore... the night you blocked me. I couldn't sleep, just thinking, Why? I couldn't even talk about it because I'd kept you a secret. Surrounded by people, I felt so alone.</p>
+                
+                <p>After SIH, I wanted to share my happiness with you... but your replies hurt me. I decided—no more thoughts of you. The first week was hard, but slowly... I moved on. Or so I thought.</p>
+                
+                <p>Then, on 19th February, your message lit up my night. My heart raced. You said I mattered in your life... and I let you back in. Since then, I'm lost in thoughts of you every day. It took me 7-8 months to realize... I love you so much, Priya. ❤️</p>
+            </section>
+            
+            <section class="section proposal-section reveal">
+                <div class="proposal-content">
+                    <div class="proposal-text">
+                        "Priya,<br>
+                        I miss you more than I show.<br>
+                        I love you more than you know.<br><br>
+                        
+                        You're my peace, my happiness, my everything.<br>
+                        Will you be mine... forever?"
+                    </div>
+                    
+                    <button class="proposal-btn" id="proposalBtn">
+                        YES, I WILL! <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+        
+        <footer class="reveal">
+            <p>Made with all my love</p>
+            <div class="signature">Yours forever</div>
+        </footer>
+    </div>
+    
+    <script>
+        // Create floating hearts
+        function createHearts() {
+            const heartIcons = ['❤️', '💖', '💗', '💓', '💞'];
+            
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.classList.add('heart');
+                
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+                heart.style.animationDuration = (Math.random() * 8 + 5) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                
+                document.body.appendChild(heart);
+            }
+        }
+        
+        // Create falling petals
+        function createPetals() {
+            const petalImages = [
+                'https://cdn.pixabay.com/photo/2017/01/10/03/06/rose-1968358_960_720.png',
+                'https://cdn.pixabay.com/photo/2017/01/31/23/42/decorative-2028037_960_720.png'
+            ];
+            
+            for (let i = 0; i < 25; i++) {
+                const petal = document.createElement('div');
+                petal.classList.add('petal');
+                
+                petal.style.backgroundImage = `url(${petalImages[Math.floor(Math.random() * petalImages.length)]})`;
+                petal.style.left = Math.random() * 100 + 'vw';
+                petal.style.top = -100 + 'px';
+                petal.style.width = (Math.random() * 40 + 20) + 'px';
+                petal.style.height = (Math.random() * 40 + 20) + 'px';
+                petal.style.animationDuration = (Math.random() * 15 + 8) + 's';
+                petal.style.animationDelay = Math.random() * 5 + 's';
+                
+                document.body.appendChild(petal);
+            }
+        }
+        
+        // Create confetti effect
+        function createConfetti() {
+            const colors = ['#d4afb9', '#9cadce', '#7ec4cf', '#d1cfe2', '#f8f4f9'];
+            
+            for (let i = 0; i < 150; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = (Math.random() * 12 + 5) + 'px';
+                confetti.style.height = (Math.random() * 12 + 5) + 'px';
+                confetti.style.animationDuration = (Math.random() * 4 + 2) + 's';
+                confetti.style.animationDelay = Math.random() * 0.5 + 's';
+                
+                document.body.appendChild(confetti);
+            }
+            
+            setTimeout(() => {
+                const confettiElements = document.querySelectorAll('.confetti');
+                confettiElements.forEach(el => el.remove());
+            }, 5000);
+        }
+        
+        // Scroll reveal animation
+        function scrollReveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const revealTop = reveal.getBoundingClientRect().top;
+                const revealPoint = 150;
+                
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                }
+            });
+        }
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Proposal button click event
+        document.getElementById('proposalBtn').addEventListener('click', function() {
+            createConfetti();
+            
+            // Change button text and style
+            this.innerHTML = "I LOVE YOU! <i class='fas fa-heart'></i>";
+            this.style.backgroundColor = '#7ec4cf';
+            this.style.color = 'white';
+            
+            // Play romantic sound (uncomment to enable)
+            // const audio = new Audio('https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3');
+            // audio.play();
+            
+            // Create floating hearts around button
+            for (let i = 0; i < 10; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'absolute';
+                heart.style.fontSize = '25px';
+                heart.style.animation = `float ${Math.random() * 3 + 2}s ease-in forwards`;
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.bottom = '0';
+                
+                this.parentElement.appendChild(heart);
+                
+                // Remove heart after animation
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }
+        });
+        
+        // Initialize effects when page loads
+        window.addEventListener('load', function() {
+            createHearts();
+            createPetals();
+            
+            // Activate first reveal elements
+            document.querySelector('.hero h1').classList.add('active');
+            document.querySelector('.hero p').classList.add('active');
+        });
+        
+        window.addEventListener('scroll', scrollReveal);
+    </script>
+</body>
+</html>
